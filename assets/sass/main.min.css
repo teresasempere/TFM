@@ -1,0 +1,1 @@
+*{border:.5px solid pink;margin:0;padding:0;box-sizing:border-box}body,html{color:black;font-size:13px;font-family:Arial, sans-serif;margin:0 auto;scroll-behavior:smooth}body{width:500px}@font-face{font-family:'Tiresias';src:url("assets/fonts/tiresias_infofont.ttf") format("truetype")}.start{display:flex;justify-content:center;align-items:center;height:100vh;font-size:2rem}

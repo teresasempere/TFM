@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Prototipo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Isabel's 25th anniversary">
+    <meta http-equiv="Page-Enter" content="revealTrans(Duration=2.0,Transition=12)">
+
+    <link href="assets/sass/main.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="assets/img/ico/favicon.ico">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="menu" id="menu">
+        <ul>
+            <a href="supports.html">
+                <li><i class="fas fa-sun"></i>
+                    <div class="menu_item">Hoy</div>
+                </li>
+            </a>
+            <a href="#">
+                <li><i class="fas fa-calendar"></i>
+                    <div class="menu_item">Horario</div>
+                </li>
+            </a>
+            <a href="#">
+                <li><i class="fas fa-hands-helping"></i>
+                    <div class="menu_item">Ayuda</div>
+                </li>
+            </a>
+            <a href="places.html">
+                <li><i class="fas fa-home"></i>
+                    <div class="menu_item">Lugares</div>
+                </li>
+            </a>
+            <li class="back" onclick="toggleMenu()"><i class="fas fa-door-open"></i>
+                <div class="menu_item">Salir</div>
+            </li>
+
+        </ul>
+
+    </div>
+    <header id="header" class="header_support">
+        <nav>
+            <div class="menu_icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i><span>MENÚ</span>
+            </div>
+            <div class="user_icon">
+                <div class="user_image">
+                    <img src="https://picsum.photos/200" alt="Icono de usuario">
+                </div>
+            </div>
+        </nav>
+        <div class="section_title">
+            <h1>Hoy</h1>
+        </div>
+    </header>
+    <div class="wrapper supports">
+
+        <div class="support card2" id="myBtn">
+            <div class="card2_image">
+                <img src="https://picsum.photos/120/120/" alt="Escuela Superior de Diseño de Madrid">
+            </div>
+            <div class="card2_name">
+                <h2>Ir a clase</h2>
+            </div>
+        </div>
+        <!--/support-->
+
+        <!----------- Modal support "Ir a clase" ----------->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal_image">
+                    <img src="https://picsum.photos/250/260/" alt="">
+                </div>
+                <div class="modal_description">
+                        <p>Tienes que ir recto, hasta encontrar las escaleras</p>
+                </div>
+                <div class="modal_footer">
+                        <div class="close">
+                                <i class="fas fa-door-open"></i>
+                                <div class="menu_item">Salir</div>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="support card2">
+            <div class="card2_icon">
+                <i class="fas fa-toilet-paper"></i>
+            </div>
+            <div class="card2_name">
+                <h2>Quiero ir al baño</h2>
+            </div>
+        </div>
+        <!--/support-->
+
+        <div class="support card2">
+            <div class="card2_icon">
+                <i class="fas fa-file"></i>
+            </div>
+            <div class="card2_name">
+                <h2>Hacer una fotocopia</h2>
+            </div>
+        </div>
+        <!--/support-->
+
+
+    </div>
+    <!--/places-->
+    <script src="./main.js"></script>
+
+</body>
+
+</html>

@@ -58,38 +58,37 @@ window.onclick = function (event) {
 
 onload = function () {
   if ('speechSynthesis' in window) {
-    /* speech synthesis supported */
+    if ('speechSynthesis' in window) {
+      var synth = speechSynthesis;
+      var flag = false;
+
+      /* references to the buttons */
+      var playEle = document.querySelector('#play');
+      var pauseEle = document.querySelector('#pause');
+      var stopEle = document.querySelector('#stop');
+
+      /* click event handlers for the buttons */
+      playEle.addEventListener('click', onClickPlay);
+
+      function onClickPlay() {
+        if (!flag) {
+          flag = true;
+          utterance = new SpeechSynthesisUtterance(
+            document.querySelector('article').textContent);
+          utterance.voice = synth.getVoices()[0];
+          utterance.onend = function () {
+            flag = false;
+          };
+          synth.speak(utterance);
+        }
+        if (synth.paused) {
+          /* unpause/resume narration */
+          synth.resume();
+        }
+      }
+    }
   } else {
     /* speech synthesis not supported */
-  }
-}
-
-if('speechSynthesis' in window) {
-  var synth = speechSynthesis;
-  var flag = false;
-
-  /* references to the buttons */
-  var playEle = document.querySelector('#play');
-  var pauseEle = document.querySelector('#pause');
-  var stopEle = document.querySelector('#stop');
-
-  /* click event handlers for the buttons */
-  playEle.addEventListener('click', onClickPlay);
-
-  function onClickPlay() {
-    if (!flag) {
-      flag = true;
-      utterance = new SpeechSynthesisUtterance(
-        document.querySelector('article').textContent);
-      utterance.voice = synth.getVoices()[0];
-      utterance.onend = function () {
-        flag = false;
-      };
-      synth.speak(utterance);
-    }
-    if (synth.paused) {
-      /* unpause/resume narration */
-      synth.resume();
-    }
+    alert("Hello! I am an alert box!");
   }
 }

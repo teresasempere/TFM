@@ -34,7 +34,7 @@ var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal 
+// When the user clicks on the button, open the modal
 btn.onclick = function () {
   modal.style.display = "block";
 }
@@ -89,6 +89,6 @@ onload = function () {
     }
   } else {
     /* speech synthesis not supported */
-    alert("Hello! I am an alert box!");
+    alert("");
   }
 }

@@ -1,26 +1,15 @@
-/* --- General --- */
-* {
-    //border: .5px solid pink;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
+/* --- Colors --- */
+$type_color: black;
+$green: #83D0B0;
+$blue: #5D86C4;
+$turquoise: #68C4D9;
+$pink: #F56A65;
 
 
-body,
-html {
-    color: black;
-    font-size: 13px;
-    font-family: Arial, sans-serif;
-    margin: 0 auto;
-    scroll-behavior: smooth;
-}
+$border1: 0.2px solid #C4C4C4;
+$shadow1:2px 2px 5px rgba(0, 0, 0, 0.12);
 
-body {
-    // width: 500px;
-}
-
-/* --- Imports --- */
 
 /* --- Mixins --- */
 @mixin image {
@@ -30,36 +19,22 @@ body {
     }
 }
 
-/* --- Colors --- */
-$type_color: black;
-$primary_color: white;
-$color1: #65A8DD;
-$color2: #96C63E;
-
-
-$red: #EF3133;
-$yellow:#F3B33E;
-$green:#96C63E;
-
-$border1: 1.5px solid black;
-$shadow:3px 3px 3px rgba(0, 0, 0, 0.3);
+@mixin card {
+    background-color: #FFFFFF;
+    box-shadow: $shadow1;
+    border: $border1;
+    border-radius: 3px;
+    padding: 1.7rem 1rem 1.7rem 1rem;
+    margin: .8rem 0 0 0;
+}
 
 
 /* --- Typography --- */
-@font-face {
-    font-family: 'Tiresias';
-    src: url('assets/fonts/tiresias_infofont.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css?family=Raleway:700|Roboto:300,400,500,700&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Lora:400,700&display=swap');
-
-$logo: 'Lora',
-serif;
-
-$regular: 400;
-$semi-bold: 600;
-$bold: 700;
-$extra-bold: 900;
+$roboto: 'Roboto', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$arial: Arial, Helvetica, sans-serif;
 
 a {
     text-decoration: none;
@@ -75,223 +50,61 @@ ul {
     list-style: none;
 }
 
+.title1 {
+    font-size: 2.5rem;
+    font-family: $roboto;
+    font-weight: 500;
+    margin: 0 0 4rem 0;
+    text-align: center;
+}
 
-/* ----> FUTURE PARTIALS ------ */
+.title2 {
+    font-size: 2rem;
+    font-family: $roboto;
+    font-weight: 500;
+}
+
+.i_pink {
+    color: $pink;
+}
+
+.i_blue {
+    color: $blue;
+}
+
+.i_turq {
+    color: $turquoise;
+}
+
+.i_green{
+    color: $green;
+}
+
+/* --- ALL --- */
+* {
+    //border: .5px solid pink;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    color: black;
+    font-size: 13px;
+    font-family: $roboto;
+    margin: 0 auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    // width: 500px;
+}
+
 
 /* --- GENERAL ---*/
-.menu {
-    overflow: scroll;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 70%;
-    font-size: 1.7rem;
-    display: none;
-    z-index: 300;
-    background-color: $primary_color;
-    height: 100vh;
-
-    ul {
-        border-right: $border1;
-
-        li {
-            border-bottom: $border1;
-            padding: 2.3rem 1.5rem 2.3rem 1.5rem;
-            font-size: 1.7rem;
-            font-weight: $semi-bold;
-            display: flex;
-            justify-content: space-around;
-            align-content: center;
-
-            .menu_item {
-                width: 70%;
-            }
-
-            i {
-                font-size: 2.1rem;
-                width: 30%;
-            }
-
-            .fa-sun {
-                color: $yellow;
-            }
-
-            .fa-calendar {
-                color: $green;
-            }
-        }
-    }
-
-    .back {
-        background-color: lighten($color: $red, $amount: 20);
-    }
-}
-
-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    nav {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        padding: .8rem;
-        align-items: center;
-
-        .menu_icon {
-            width: 50%;
-            padding: .5rem 0 .5rem 0;
-            border: $border1;
-            font-weight: $bold;
-            font-size: 1.6rem;
-            text-align: center;
-            box-shadow: $shadow;
-
-            span {
-                margin: 0 0 0 1rem;
-            }
-        }
-
-        .user_icon {
-            width: 4rem;
-            height: 4rem;
-            border-radius: 4rem;
-            border: $border1;
-
-            img {
-                width: 100%;
-                object-fit: contain;
-                border-radius: 4rem;
-            }
-        }
-    }
-
-    .section_title {
-        display: flex;
-        justify-content: center;
-        padding: .7rem;
-        border: $border1;
-        background-color: $primary_color;
-    }
-}
-
 .wrapper {
     padding: 11rem 0 2rem 0;
-}
-
-/* -> Sticky header" */
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-
-.sticky+.wrapper {
-    padding-top: 100px;
-}
-
-/* -> Cards */
-.card1 {
-    padding: 1.5rem 2rem 1.5rem 2rem;
-    margin: 1rem 0 0 0;
-    border: $border1;
-    background-color: $primary_color;
-    box-shadow: $shadow;
-
-    &:first-child {
-        margin: 0;
-    }
-
-    .card1_image {
-        width: 100%;
-
-        img {
-            width: 100%;
-            object-fit: cover;
-        }
-    }
-
-    .card1_icon {
-        background-color: $color1;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        padding: 2rem;
-
-        i {
-            font-size: 7rem;
-        }
-    }
-
-
-    .card1_name {
-        margin: 1rem 0 .7rem 0;
-
-        h2 {
-            font-weight: $extra-bold;
-            font-size: 1.5rem;
-        }
-    }
-
-    .card1_description {
-        font-weight: $regular;
-        font-size: 1.2rem;
-        line-height: 1.8rem;
-    }
-}
-
-.card2 {
-    padding: .6rem .5rem .6rem .6rem;
-    margin: 1rem 0 0 0;
-    border: $border1;
-    background-color: $primary_color;
-    box-shadow: $shadow;
-    display: flex;
-    flex-flow: row wrap;
-
-    &:first-child {
-        margin: 0;
-    }
-
-    .card1_image {
-        width: 120px;
-        height: 120px;
-
-        img {
-            width: 30%;
-            object-fit: contain;
-        }
-    }
-
-    .card2_icon {
-        background-color: $yellow;
-        width: 45%;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        padding: 2rem;
-
-        i {
-            font-size: 5rem;
-        }
-    }
-
-    .card2_name {
-        margin: 0 0 0 .8rem;
-        width: 50%;
-        display: flex;
-        align-items: center;
-
-        h2 {
-            font-weight: $bold;
-            font-size: 2rem;
-        }
-    }
-
 }
 
 
@@ -305,110 +118,86 @@ header {
     padding: 0;
 
     .logo {
-        font-family: $logo;
+        font-family: $raleway;
         font-size: 4rem;
-        font-weight: $bold;
+        font-weight: bold;
         color: $type_color;
     }
 
-}
+    .imagotype {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        -webkit-animation-name: animate;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4s;
+        /* Safari 4.0 - 8.0 */
+        animation-name: animate;
+        animation-duration: 4s;
+    }
 
-/* --- PLACES ---*/
-.header_places {
-    background-color: darken($color: $color1, $amount: 10);
-    nav {
-        .menu_icon {
-            background-color: lighten($color: $color1, $amount: 20);
+    @-webkit-keyframes animate {
+        from {
+            background-color: red;
+        }
+
+        to {
+            background-color: yellow;
+        }
+
+        0% {
+            transform: translateY(-20px);
+        }
+
+        100% {
+            transform: translateY(0px);
         }
     }
-}
-.places {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    background-color: $color1;
 
-    .place {
+    /* Standard syntax */
+    @keyframes animate {
+        from {
+            background-color: red;
+        }
+
+        to {
+            background-color: yellow;
+        }
+
+        0% {
+            transform: translateY(-20px);
+        }
+        40% {
+            transform: translateY(0px);
+        }
+    }
+
+}
+
+/* --- WHO ---*/
+.who {
+    background-color: lighten($color: $turquoise, $amount: 30);
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+
+    h1 {
+        text-align: center;
+    }
+
+    .card1 {
         width: 80%;
-    }
-}
-
-/* --- SUPPORTS ---*/
-
-.header_support {
-    background-color: darken($color: $yellow, $amount: 10);
-    nav {
-        .menu_icon {
-            background-color: white;
-        }
-    }
-}
-.supports {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    background-color: lighten($color: $yellow, $amount: 10);
-
-    .support {
-        width: 90%;
-    }
-}
-
-
-/*-> Modal */
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: white;
-    margin: 1rem auto;
-    padding: 1.5rem 2rem 1.5rem 2rem;
-    border: 1px solid #888;
-    width: 85%;
-    .modal_image {
-        width: 100%;
-        img {
-            width: 100%;
-            object-fit: cover;
-        }
-    }
-    .modal_description {
-        font-size: 1.5rem;
-        font-weight: $bold;
-        line-height: 2rem;
-        margin: 1.5rem 0 1.5rem 0;
-    }
-
-    .close {
+        @include card;
         display: flex;
-        justify-content: center;
-        font-size: 1.5rem;
-        border: $border1;
-        padding: .7rem;
-        background-color: lighten($color: $red, $amount: 20);
-        i {
-            width: 20%;
-        }
-        .menu_item {
-            font-weight: $bold;
+        flex-flow: row wrap;
+
+        .text {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin: 0 0 0 1rem;
+            width: 85%;
         }
     }
-}
 
-.show {
-    display: block;
 }

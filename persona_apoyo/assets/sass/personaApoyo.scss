@@ -1,0 +1,249 @@
+
+/* --- Colors --- */
+$type_color: black;
+$green: #83D0B0;
+$blue: #5D86C4;
+$turquoise: #68C4D9;
+$pink: #F56A65;
+
+
+$border1: 0.2px solid #C4C4C4;
+$shadow1:2px 2px 5px rgba(0, 0, 0, 0.12);
+
+
+.b_green {
+    background-color: $green;
+}
+.b_blue {
+    background-color: $blue;
+}
+.b_pink {
+    background-color: $pink;
+}
+.b_turq {
+    background-color: $turquoise;
+}
+
+
+/* --- Mixins --- */
+@mixin image {
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@mixin card {
+    background-color: #FFFFFF;
+    box-shadow: $shadow1;
+    border: $border1;
+    border-radius: 3px;
+    padding: 1.7rem 1rem 1.7rem 1rem;
+    margin: .8rem 0 0 0;
+}
+
+
+/* --- Typography --- */
+@import url('https://fonts.googleapis.com/css?family=Raleway:700|Roboto:300,400,500,700&display=swap');
+
+$roboto: 'Roboto', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$arial: Arial, Helvetica, sans-serif;
+
+a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+
+    &:visited {
+        color: inherit;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+.title1 {
+    font-size: 2.5rem;
+    font-family: $roboto;
+    font-weight: 500;
+    margin: 0 0 4rem 0;
+    text-align: center;
+}
+
+.title2 {
+    font-size: 2rem;
+    font-family: $roboto;
+    font-weight: 500;
+    text-align: center;
+}
+
+.i_pink {
+    color: $pink;
+}
+
+.i_blue {
+    color: $blue;
+}
+
+.i_turq {
+    color: $turquoise;
+}
+
+.i_green{
+    color: $green;
+}
+
+/* --- COMPONENTS---*/
+
+button {
+    border: $border1;
+    box-shadow: $shadow1;
+    border-radius: 3px;
+    padding: 1rem 1.2rem 1rem 1.2rem;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: .7rem 0 0 0 ;
+}
+
+
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+input {
+    background-color: lighten($color: $turquoise, $amount: 25);
+    border: $border1;
+    box-shadow: inset -2px 2px 2px rgba(0, 0, 0, 0.09);
+    border-radius: 3px;
+    width: 80%;
+    height: 1.6rem;
+    margin:0 0 1rem 0;
+}
+
+
+/* --- ALL --- */
+* {
+    //border: .5px solid pink;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    color: black;
+    font-size: 13px;
+    font-family: $roboto;
+    margin: 0 auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    // width: 500px;
+}
+
+
+/* --- GENERAL ---*/
+.wrapper {
+    padding: 11rem 0 2rem 0;
+}
+
+
+/* --- LOGIN ---*/
+
+.login {
+    background-color: lighten($color: $turquoise, $amount: 30);
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    padding: 5rem 0 0 0;
+
+    .login_main {
+        width: 80%;
+        @include card;
+        .description {
+            margin: 0 0 .5rem 0;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-content: center;
+
+            i {
+                color: $turquoise;
+                font-size: 1.2rem;
+                margin: 0 0 0 .2rem;
+            }
+        }
+
+    }
+
+    .login_photo {
+        width: 80%;
+        @include card;
+        display: flex;
+        justify-content: space-around;
+
+        .right {
+            width: 80px;
+            height: 80px;
+            background-color: lighten($color: $turquoise, $amount: 20);
+            border-radius: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i {
+                text-align: center;
+                font-size: 4rem;
+                color: $turquoise;
+            }
+        }
+    }
+    .actions {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+}
+
+
+/* --- CONFIRMATION ---*/
+
+.confirmation {
+    background-color: lighten($color: $turquoise, $amount: 30);
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    padding: 5rem 0 0 0;
+
+    .confirmation_main {
+        width: 80%;
+        @include card;
+        .description {
+            margin: 0 0 .5rem 0;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-content: center;
+
+            i {
+                color: $turquoise;
+                font-size: 1.2rem;
+                margin: 0 0 0 .2rem;
+            }
+        }
+
+    }
+
+    .actions {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+}

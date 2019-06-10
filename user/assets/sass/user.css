@@ -368,30 +368,36 @@ header .section_title {
 }
 
 /*---- QR ----*/
-.qrcode-text-btn {
-  display: inline-block;
-  height: 1em;
-  width: 1em;
-  background: url(qr_icon.svg) 50% 50% no-repeat;
-  cursor: pointer;
+.scan {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background: grey;
 }
 
-.qrcode-text-btn > input[type=file] {
+span.border {
+  display: block;
+  width: 100%;
+  border: 1px solid red;
   position: absolute;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
+  -webkit-animation: mover ease-out 1s infinite alternate;
+  animation: mover ease-out 1s infinite alternate;
 }
 
-.qrcode-text {
-  padding-right: 1.7em;
-  margin-right: 0;
-  vertical-align: middle;
+@-webkit-keyframes mover {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 200px;
+  }
 }
 
-.qrcode-text + .qrcode-text-btn {
-  width: 1.7em;
-  margin-left: -1.7em;
-  vertical-align: middle;
+@keyframes mover {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 200px;
+  }
 }

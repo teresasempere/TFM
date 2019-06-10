@@ -1,4 +1,3 @@
-
 /* --- Colors --- */
 $type_color: black;
 $green: #83D0B0;
@@ -32,9 +31,13 @@ $shadow1:2px 2px 5px rgba(0, 0, 0, 0.12);
 /* --- Typography --- */
 @import url('https://fonts.googleapis.com/css?family=Raleway:700|Roboto:300,400,500,700&display=swap');
 
-$roboto: 'Roboto', sans-serif;
-$raleway: 'Raleway', sans-serif;
-$arial: Arial, Helvetica, sans-serif;
+$roboto: 'Roboto',
+sans-serif;
+$raleway: 'Raleway',
+sans-serif;
+$arial: Arial,
+Helvetica,
+sans-serif;
 
 a {
     text-decoration: none;
@@ -76,7 +79,7 @@ ul {
     color: $turquoise;
 }
 
-.i_green{
+.i_green {
     color: $green;
 }
 
@@ -127,22 +130,24 @@ body {
     .imagotype {
         width: 100px;
         height: 100px;
-        background-color: yellow;
-        -webkit-animation-name: animate;
-        /* Safari 4.0 - 8.0 */
-        -webkit-animation-duration: 4s;
-        /* Safari 4.0 - 8.0 */
-        animation-name: animate;
-        animation-duration: 4s;
+
+        svg {
+            -webkit-animation-name: animate;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 4s;
+            /* Safari 4.0 - 8.0 */
+            animation-name: animate;
+            animation-duration: 4s;
+        }
     }
 
     @-webkit-keyframes animate {
         from {
-            background-color: red;
+            color: red;
         }
 
         to {
-            background-color: yellow;
+            color: yellow;
         }
 
         0% {
@@ -157,16 +162,17 @@ body {
     /* Standard syntax */
     @keyframes animate {
         from {
-            background-color: red;
+            color: red;
         }
 
         to {
-            background-color: yellow;
+            color: yellow;
         }
 
         0% {
             transform: translateY(-20px);
         }
+
         40% {
             transform: translateY(0px);
         }

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Vista de usuario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prototipo">
+    <meta http-equiv="Page-Enter" content="revealTrans(Duration=2.0,Transition=12)">
+
+    <link href="assets/sass/personaApoyo.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="assets/img/ico/favicon.ico">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="users">
+
+        <div class="side_menu_container">
+            <div class="side_menu">
+
+                <div class="menu_close"><i class="material-icons">
+                        close
+                    </i></div>
+
+                <ul>
+                    <li class="menu_logo"><img src="../assets/img/logos/logo.svg" alt=""></li>
+                    <li><span><i class="material-icons">
+                                settings
+                            </i></span>Configuración</li>
+                    <li><span><i class="material-icons">
+                                face
+                            </i></span>Mi perfil</li>
+                    <a href="../who.html">
+                        <li><span><i class="material-icons close">
+                                    power_settings_new
+                                </i></span>Cerrar sesión</li>
+                    </a>
+                </ul>
+
+            </div> <!-- /side_menu-->
+        </div> <!-- /side_menu_container-->
+
+        <header>
+            <div class="menu_toggle"><i class="material-icons">
+                    menu
+                </i></div>
+            <div class="header_title">
+                <h1>Usuarios</h1>
+            </div>
+            <div class="header_logo"><img src="../assets/img/logos/iso_turq.svg" alt=""></div>
+        </header>
+
+        <main>
+            <div class="user_wrapper">
+                    <div class="breadcrumb">
+                            <ul>
+                                <a href="./pa_users.html"><li>Usuarios</li></a>
+                                <li class="li_selected">Vista de usuario</li>
+                            </ul>
+                    </div> <!--breadcrumb-->
+
+                    <div class="detail_card">
+                        <div class="photo">
+                            <img src="../assets/img/users/user1.jpg" alt="">
+                        </div>
+                        <div class="card_info">
+                            <div class="user_name">Nombre de la persona</div>
+                            <div class="user_id">id.user155</div>
+
+                            <div class="card_footer">
+                                <div class="identification">
+                                    <i class="material-icons">
+                                        face
+                                    </i>
+                                </div>
+
+                            </div>
+                            <!--detail_footer-->
+                        </div>
+                        <!--detail_info-->
+
+                    </div>
+                    <!--detail_card-->
+
+                    <div class="navigation">
+                        <ul>
+                            <li class="nav_places nav_selected">Lugares</li>
+                            <li class="nav_groups">Grupos</li>
+                            <li class="nav_calendar">Calendario</li>
+                            <li class="nav_settings">Ajustes</li>
+                        </ul>
+                    </div><!--navigation-->
+
+            </div>
+
+            <div class="places">
+                <div class="place_card">
+                    <span></span>
+                </div>
+            </div>
+
+            <!--users_wrapper-->
+        </main>
+
+        <footer class="footer_users">
+            <a href="./pa_users.html">
+                <i class="material-icons i_selected">
+                    group
+                </i>
+            </a>
+
+            <a href="./pa_groups.html">
+                <i class="material-icons no_selected">
+                    group_work
+                </i>
+            </a>
+
+            <a href="./pa_places.html">
+                <i class="material-icons no_selected">
+                    place
+                </i>
+            </a>
+
+            <a href="./pa_calendar.html">
+                <i class="material-icons no_selected">
+                    calendar_today
+                </i>
+            </a>
+
+            <div class="search_bar">
+                <input type="text" placeholder="¿Qué estás buscando?">
+            </div>
+
+            <i class="material-icons search_icon">
+                search
+            </i>
+
+        </footer>
+
+        <div class="add_button">
+
+        </div>
+
+
+    </div>
+    <!--/users-->
+
+    <script src="./pa.js"></script>
+
+</body>
+
+</html>

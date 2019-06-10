@@ -88,7 +88,9 @@ html {
 .start .imagotype {
   width: 100px;
   height: 100px;
-  background-color: yellow;
+}
+
+.start .imagotype svg {
   -webkit-animation-name: animate;
   /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 4s;
@@ -99,10 +101,10 @@ html {
 
 @-webkit-keyframes animate {
   from {
-    background-color: red;
+    color: red;
   }
   to {
-    background-color: yellow;
+    color: yellow;
   }
   0% {
     transform: translateY(-20px);
@@ -114,10 +116,10 @@ html {
 
 @keyframes animate {
   from {
-    background-color: red;
+    color: red;
   }
   to {
-    background-color: yellow;
+    color: yellow;
   }
   0% {
     transform: translateY(-20px);

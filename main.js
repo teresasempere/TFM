@@ -6,7 +6,7 @@ function toggleMenu() {
 }
 
 
-/* --- Sticky header" --- 
+/* --- Sticky header" ---
 
 window.onscroll = function() {myFunction()};
 

@@ -366,6 +366,10 @@ main .navigation ul {
   padding: .5rem 1rem .5rem 1rem;
 }
 
+main .content {
+  padding: 1rem 1.3rem 6rem 1.3rem;
+}
+
 footer {
   display: flex;
   flex-flow: row wrap;
@@ -391,14 +395,6 @@ footer .search_bar {
   display: none;
 }
 
-footer .show {
-  display: block;
-}
-
-footer .hide {
-  display: none;
-}
-
 footer input {
   background-color: white;
   height: 3rem;
@@ -411,6 +407,14 @@ footer input::placeholder {
   color: #404040;
   font-family: "Roboto", sans-serif;
   font-size: 1.1rem;
+}
+
+footer .show {
+  display: block;
+}
+
+footer .hide {
+  display: none;
 }
 
 /* --- CARDS ---*/
@@ -547,6 +551,60 @@ footer input::placeholder {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
   border: 0.2px solid #C4C4C4;
   border-radius: 3px;
+  margin: .7rem 0 0 0;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+}
+
+.place_card .card_header {
+  display: flex;
+}
+
+.place_card .card_header .name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 0 .6rem;
+}
+
+.place_card .card_header i {
+  color: #F56A65;
+}
+
+.place_card .more_info {
+  display: none;
+}
+
+.place_card .more_info ul {
+  padding: 1.2rem 0 .8rem 2rem;
+}
+
+.place_card .more_info ul li {
+  background-color: #ceecf3;
+  margin: .8rem 0 0 0;
+  padding: .6rem;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #333333;
+}
+
+.place_card .card_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: .5rem 0 0 0;
+}
+
+.place_card .card_footer .show_less {
+  display: none;
+  color: #68C4D9;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.place_card .card_footer .show_more {
+  color: #68C4D9;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 .group_card {
@@ -605,4 +663,28 @@ footer input::placeholder {
 .users .user_wrapper {
   padding: 0;
   margin: 4rem 0 0 0;
+}
+
+.users .user_wrapper .content .places {
+  display: block;
+}
+
+.users .user_wrapper .content .groups {
+  display: none;
+}
+
+.users .user_wrapper .content .calendar {
+  display: none;
+}
+
+.users .user_wrapper .content .settings {
+  display: none;
+}
+
+.users .user_wrapper .content .show {
+  display: block;
+}
+
+.users .user_wrapper .content .hide {
+  display: none;
 }

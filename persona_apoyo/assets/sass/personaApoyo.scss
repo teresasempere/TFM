@@ -383,6 +383,7 @@ main {
 
         ul {
             display: flex;
+
             li {
                 margin: 0 1rem 0 0;
                 color: white;
@@ -390,23 +391,31 @@ main {
                 font-size: 1rem;
             }
         }
+
         .li_selected {
             color: $type_color;
             font-weight: 600;
         }
 
     }
-    
+
     .navigation {
         @include card;
         background-color: white;
+
         ul {
             display: flex;
             justify-content: space-around;
             padding: .5rem 1rem .5rem 1rem;
         }
     }
+
+    .content {
+        padding: 1rem 1.3rem 6rem 1.3rem;
+    }
 }
+
+
 footer {
     display: flex;
     flex-flow: row wrap;
@@ -431,14 +440,6 @@ footer {
         display: none;
     }
 
-    .show {
-        display: block;
-    }
-
-    .hide {
-        display: none;
-    }
-
     input {
         background-color: white;
         height: 3rem;
@@ -452,7 +453,18 @@ footer {
             font-size: 1.1rem;
         }
     }
+
+    .show {
+        display: block;
+    }
+
+    .hide {
+        display: none;
+    }
 }
+
+//Calendar Mockup
+
 
 
 /* --- CARDS ---*/
@@ -581,7 +593,62 @@ footer {
 
 .place_card {
     @include card;
-    
+    margin: .7rem 0 0 0;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+
+    .card_header {
+        display: flex;
+        //align-items: center;
+
+        .name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0 0 0 .6rem;
+        }
+
+        i {
+            color: $pink;
+        }
+    }
+
+    .more_info {
+        display: none;
+        ul {
+            padding: 1.2rem 0 .8rem 2rem;
+
+            li {
+                background-color: lighten($color: $turquoise, $amount: 25);
+                margin: .8rem 0 0 0;
+                padding: .6rem;
+                border-radius: 3px;
+                font-weight: 500;
+                font-size: 1.1rem;
+                color: lighten($color: $type_color, $amount: 20)
+            }
+
+            .given {}
+        }
+    }
+
+    .card_footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: .5rem 0 0 0;
+
+        .show_less {
+            display: none;
+            color: $turquoise;
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+
+        .show_more {
+            color: $turquoise;
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+    }
 
 }
 
@@ -612,6 +679,7 @@ footer {
 
     main {
         background-color: lighten($color: $turquoise, $amount: 30);
+
         .breadcrumb {
             background-color: $turquoise;
         }
@@ -636,6 +704,7 @@ footer {
                     color: lighten($color: $type_color, $amount: 65);
                     font-weight: 500;
                 }
+
                 .nav_selected {
                     color: $pink;
                 }
@@ -650,9 +719,33 @@ footer {
     .user_wrapper {
         padding: 0;
         margin: 4rem 0 0 0;
+
+        .content {
+            .places {
+                display: block;
+            }
+
+            .groups {
+                display: none;
+            }
+
+            .calendar {
+                display: none;
+            }
+
+            .settings {
+                display: none;
+            }
+
+            .show {
+                display: block;
+            }
+
+            .hide {
+                display: none;
+            }
+
+        }
     }
 
 }
-
-
-

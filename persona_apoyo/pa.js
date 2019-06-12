@@ -25,6 +25,11 @@ $(document).ready(
             $(".places").hide();
             $(".calendar").hide();
             $(".settings").hide();
+
+            $(".nav_groups").addClass("nav_selected");
+            $(".nav_places").removeClass("nav_selected");
+            $(".nav_calendar").removeClass("nav_selected");
+            $(".nav_settings").removeClass("nav_selected");
         });
 
         $(".nav_places").click(function () {
@@ -32,6 +37,11 @@ $(document).ready(
             $(".groups").hide();
             $(".calendar").hide();
             $(".settings").hide();
+
+            $(".nav_places").addClass("nav_selected");
+            $(".nav_groups").removeClass("nav_selected");
+            $(".nav_calendar").removeClass("nav_selected");
+            $(".nav_settings").removeClass("nav_selected");
         });
 
         $(".nav_calendar").click(function () {
@@ -39,6 +49,11 @@ $(document).ready(
             $(".places").hide();
             $(".groups").hide();
             $(".settings").hide();
+
+            $(".nav_calendar").addClass("nav_selected");
+            $(".nav_groups").removeClass("nav_selected");
+            $(".nav_places").removeClass("nav_selected");
+            $(".nav_settings").removeClass("nav_selected");
         });
 
         $(".nav_settings").click(function () {
@@ -46,6 +61,11 @@ $(document).ready(
             $(".places").hide();
             $(".calendar").hide();
             $(".groups").hide();
+
+            $(".nav_settings").addClass("nav_selected");
+            $(".nav_groups").removeClass("nav_selected");
+            $(".nav_places").removeClass("nav_selected");
+            $(".nav_calendar").removeClass("nav_selected");
         });
 
         // "Show more"
@@ -59,6 +79,19 @@ $(document).ready(
             $(".more_info").hide();
             $(".show_more").show();
             $(".show_less").hide();
+        });
+
+        // Edit button
+        $(".edit_button").click(function () {
+            $(".modal_edit").removeClass("hide");
+        });
+        $(".close_modal_edit").click(function () {
+            $(".modal_edit").addClass("hide");
+        });
+
+        //group remove user
+        $(".remove_user").click(function () {
+            $(".user_remove").hide();
         });
 
         //Calendar

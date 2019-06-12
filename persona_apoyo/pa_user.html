@@ -62,53 +62,60 @@
 
         <main>
             <div class="user_wrapper">
-                <div class="breadcrumb">
-                    <ul>
-                        <a href="./pa_users.html">
-                            <li>Usuarios</li>
-                        </a>
-                        <li class="li_selected">Vista de usuario</li>
-                    </ul>
-                </div>
-                <!--breadcrumb-->
 
-                <div class="detail_card">
-                    <div class="photo">
-                        <img src="../assets/img/users/user1.jpg" alt="">
+                <div class="info_top">
+
+                    <div class="breadcrumb">
+                        <ul>
+                            <a href="./pa_users.html">
+                                <li>Usuarios</li>
+                            </a>
+                            <li class="li_selected">Vista de usuario</li>
+                        </ul>
                     </div>
-                    <div class="card_info">
-                        <div class="user_name">Nombre de la persona</div>
-                        <div class="user_id">id.user155</div>
+                    <!--breadcrumb-->
 
-                        <div class="card_footer">
-                            <div class="identification">
-                                <i class="material-icons">
-                                    face
-                                </i>
-                            </div>
-
+                    <div class="detail_card">
+                        <div class="photo">
+                            <img src="../assets/img/users/user1.jpg" alt="">
                         </div>
-                        <!--detail_footer-->
+                        <div class="card_info">
+                            <div class="user_name">Nombre de la persona</div>
+                            <div class="user_id">id.user155</div>
+
+                            <div class="card_footer">
+                                <div class="identification">
+                                    <i class="material-icons">
+                                        face
+                                    </i>
+                                </div>
+
+                            </div>
+                            <!--detail_footer-->
+                        </div>
+                        <!--detail_info-->
+
                     </div>
-                    <!--detail_info-->
+                    <!--detail_card-->
+
+                    <div class="navigation">
+                        <ul>
+                            <li class="nav_places nav_selected">Lugares</li>
+                            <li class="nav_groups">Grupos</li>
+                            <li class="nav_calendar">Calendario</li>
+                            <li class="nav_settings">Ajustes</li>
+                        </ul>
+                    </div>
+                    <!--navigation-->
+
 
                 </div>
-                <!--detail_card-->
-
-                <div class="navigation">
-                    <ul>
-                        <li class="nav_places nav_selected">Lugares</li>
-                        <li class="nav_groups">Grupos</li>
-                        <li class="nav_calendar">Calendario</li>
-                        <li class="nav_settings">Ajustes</li>
-                    </ul>
-                </div>
-                <!--navigation-->
-
+                <!--/info_top-->
 
 
                 <div class="content">
                     <div class="places">
+
                         <div class="place_card">
                             <div class="card_header">
                                 <span>
@@ -136,27 +143,415 @@
                                 <div class="show_less">
                                     Mostrar menos
                                 </div>
-                                <button class="b_turq">Editar</button>
+                                <button class="b_turq edit_button">Editar</button>
                             </div>
                         </div>
+                        <!--/place_card-->
+
+                        <div class="place_card">
+                            <div class="card_header">
+                                <span>
+                                    <i class="material-icons">
+                                        place
+                                    </i>
+                                </span>
+                                <div class="name">
+                                    Centro de Salud Arroyo Medialegua
+                                </div>
+                            </div>
+
+                            <div class="card_footer">
+                                <div class="show_more1">
+                                    Mostrar más
+                                </div>
+                                <button class="b_turq edit_button">Editar</button>
+                            </div>
+                        </div>
+                        <!--/place_card no more info-->
+
+                        <div class="place_card">
+                            <div class="card_header">
+                                <span>
+                                    <i class="material-icons">
+                                        place
+                                    </i>
+                                </span>
+                                <div class="name">
+                                    Biblioteca Pública Municipal Miguel Delibes
+                                </div>
+                            </div>
+
+                            <div class="card_footer">
+                                <div class="show_more1">
+                                    Mostrar más
+                                </div>
+                                <button class="b_turq edit_button">Editar</button>
+                            </div>
+                        </div>
+                        <!--/place_card no more info-->
+
+                        <div class="place_card">
+                            <div class="card_header">
+                                <span>
+                                    <i class="material-icons">
+                                        place
+                                    </i>
+                                </span>
+                                <div class="name">
+                                    Biblioteca Pública Moratalaz
+                                </div>
+                            </div>
+
+                            <div class="card_footer">
+                                <div class="show_more1">
+                                    Mostrar más
+                                </div>
+                                <button class="b_turq edit_button">Editar</button>
+                            </div>
+                        </div>
+                        <!--/place_card no more info-->
+
+                        <div class="place_card">
+                            <div class="card_header">
+                                <span>
+                                    <i class="material-icons">
+                                        place
+                                    </i>
+                                </span>
+                                <div class="name">
+                                    Alcampo Moratalaz Centro Comercial
+                                </div>
+                            </div>
+
+                            <div class="card_footer">
+                                <div class="show_more1">
+                                    Mostrar más
+                                </div>
+                                <button class="b_turq edit_button">Editar</button>
+                            </div>
+                        </div>
+                        <!--/place_card no more info-->
+
                     </div>
                     <!--/places-->
 
-                    <div class="groups">
-                        <div class="place_card">
-                            group
+                    <div class="modal_edit hide">
+                        <div class="modal_content">
+                            <div class="close_modal_edit">
+                                <i class="material-icons">
+                                    close
+                                </i>
+                            </div>
+                            <ul>
+                                <li>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <div class="task task_selected">Ir al baño</div>
+                                </li>
+                                <li>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <div class="task task_selected">Pedir información</div>
+                                </li>
+                                <li>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <div class="task task_selected">Ir a la biblioteca</div>
+                                </li>
+                                <li>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <div class="task">Ir al taller</div>
+                                </li>
+                                <li>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <div class="task">Ir al estudio</div>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
+                    <!--/modal_edit-->
+
+                    <div class="groups">
+                        <div class="group_card">
+                            <div class="photo">
+                                <img src="../assets/img/groups/group1.jpg" alt="User photo">
+                            </div>
+                            <div class="card_info">
+                                <div class="user_name">Nombre del grupo</div>
+
+                                <div class="card_footer">
+                                    <div class="info_group">
+                                        <span><i class="material-icons">
+                                                place
+                                            </i>
+                                        </span>
+                                        <b>5</b>lugares asignados
+                                    </div>
+
+                                    <div class="info_group">
+                                        <span><i class="material-icons">
+                                                group
+                                            </i>
+                                        </span>
+                                        <b>6</b>usuarios
+                                    </div>
+
+                                </div>
+                                <!--user_footer-->
+                            </div>
+                            <!--user_info-->
+
+                        </div>
+                        <!--group_card-->
+
+                        <div class="group_card">
+                            <div class="photo">
+                                <img src="../assets/img/groups/group2.jpg" alt="User photo">
+                            </div>
+                            <div class="card_info">
+                                <div class="user_name">Nombre del grupo</div>
+
+                                <div class="card_footer">
+                                    <div class="info_group">
+                                        <span><i class="material-icons">
+                                                place
+                                            </i>
+                                        </span>
+                                        <b>5</b>lugares asignados
+                                    </div>
+
+                                    <div class="info_group">
+                                        <span><i class="material-icons">
+                                                group
+                                            </i>
+                                        </span>
+                                        <b>6</b>usuarios
+                                    </div>
+
+                                </div>
+                                <!--user_footer-->
+                            </div>
+                            <!--user_info-->
+
+                        </div>
+                        <!--group_card-->
+
+                        <div class="group_card">
+                            <div class="photo">
+                                <img src="../assets/img/groups/group3.jpg" alt="User photo">
+                            </div>
+                            <div class="card_info">
+                                <div class="user_name">Nombre del grupo</div>
+
+                                <div class="card_footer">
+                                    <div class="info_group">
+                                        <span><i class="material-icons">
+                                                place
+                                            </i>
+                                        </span>
+                                        <b>5</b>lugares asignados
+                                    </div>
+
+                                    <div class="info_group">
+                                        <span><i class="material-icons">
+                                                group
+                                            </i>
+                                        </span>
+                                        <b>6</b>usuarios
+                                    </div>
+
+                                </div>
+                                <!--user_footer-->
+                            </div>
+                            <!--user_info-->
+
+                        </div>
+                        <!--group_card-->
+
+                        <div class="group_card">
+                            <div class="photo">
+                                <img src="../assets/img/groups/group1.jpg" alt="User photo">
+                            </div>
+                            <div class="card_info">
+                                <div class="user_name">Nombre del grupo</div>
+
+                                <div class="card_footer">
+                                    <div class="info_group">
+                                        <span><i class="material-icons">
+                                                place
+                                            </i>
+                                        </span>
+                                        <b>5</b>lugares asignados
+                                    </div>
+
+                                    <div class="info_group">
+                                        <span><i class="material-icons">
+                                                group
+                                            </i>
+                                        </span>
+                                        <b>6</b>usuarios
+                                    </div>
+
+                                </div>
+                                <!--user_footer-->
+                            </div>
+                            <!--user_info-->
+
+                        </div>
+                        <!--group_card-->
+
                     </div>
                     <!--/groups-->
 
                     <div class="calendar">
-                        
+                        <div class="calendar_mock">
+                            <div class="mainHead">
+                                <h1>February 2014</h1>
+                            </div>
+
+                            <!-- days -->
+                            <ul class="start">
+                                <li class="days">Mon</li>
+                                <li class="days">Tue</li>
+                                <li class="days">Wed</li>
+                                <li class="days">Thu</li>
+                                <li class="days">Fri</li>
+                                <li class="days">Sat</li>
+                                <li class="days">Sun</li>
+                            </ul>
+
+                            <!-- row 27-2 -->
+                            <ul class="start">
+                                <li class="column light">27</li>
+                                <li class="column light"><i class="work"></i>28</li>
+                                <li class="column light">29</li>
+                                <li class="column light">30</li>
+                                <li class="column light">31</li>
+                                <li class="column weekend">1</li>
+                                <li class="column weekend">2</li>
+                            </ul>
+
+                            <!-- row 3-9 -->
+                            <ul class="start">
+                                <li class="column">3</li>
+                                <li class="column">4</li>
+                                <li class="column">5</li>
+                                <li class="column">6</li>
+                                <li class="column"><i class="event"></i>7</li>
+                                <li class="column weekend">8</li>
+                                <li class="column weekend">9</li>
+                            </ul>
+
+                            <!-- row 10-16 -->
+                            <ul class="start">
+                                <li class="column">10</li>
+                                <li class="column">11</li>
+                                <li class="column"><i class="meeting"></i>12</li>
+                                <li class="column">13</li>
+                                <li class="column">14</li>
+                                <li class="column weekend">15</li>
+                                <li class="column weekend">16</li>
+                            </ul>
+
+                            <!-- row 17-23 -->
+                            <ul class="start">
+                                <li class="column">17</li>
+                                <li class="column">18</li>
+                                <li class="column">19</li>
+                                <li class="column">20</li>
+                                <li class="column">21</li>
+                                <li class="column weekend">22</li>
+                                <li class="column weekend">23</li>
+                            </ul>
+
+                            <!-- row 24-2 -->
+                            <ul class="start">
+                                <li class="column">24</li>
+                                <li class="column">25</li>
+                                <li class="column">26</li>
+                                <li class="column">27</li>
+                                <li class="column"><i class="work"></i>28</li>
+                                <li class="column light weekend">1</li>
+                                <li class="column light weekend">2</li>
+                            </ul>
+
+                            <!-- row 3-9 -->
+                            <ul class="start">
+                                <li class="column light">3</li>
+                                <li class="column light">4</li>
+                                <li class="column light">5</li>
+                                <li class="column light">6</li>
+                                <li class="column light">7</li>
+                                <li class="column light weekend">8</li>
+                                <li class="column light weekend">9</li>
+                            </ul>
+                        </div>
+
                     </div>
                     <!--/calendar-->
 
                     <div class="settings">
                         <div class="place_card">
-                            Ajustes
+                            <div class="setting">
+                                <input type="text">
+                                <div class="task">Tamaño de la fuente</div>
+                            </div>
+                            <div class="setting">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <div class="task task_selected">Contraste sobre negro</div>
+                            </div>
+
+                        </div>
+
+                        <div class="place_card">
+                            <div class="setting">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                                <div class="task task_selected">Ayuda por voz</div>
+                            </div>
+
+                            <div class="setting">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                                <div class="task task_selected">Contacto de ayuda con el lugar</div>
+                            </div>
+
+                            <div class="setting">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <div class="task task_selected">Contacto de ayuda con persona de ayuda</div>
+                            </div>
+
+                            <div class="setting">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                                <div class="task task_selected">Iconos ARASAAC</div>
+                            </div>
+
+
                         </div>
                     </div>
                     <!--/settings-->
@@ -164,6 +559,10 @@
 
             </div>
             <!--users_wrapper-->
+
+            <div class="more_button">
+                +
+            </div>
         </main>
 
         <footer class="footer_users">

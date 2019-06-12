@@ -20,6 +20,8 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -30,16 +32,19 @@
                     <div class="menu_item">Hoy</div>
                 </li>
             </a>
-            <a href="#">
-                <li><i class="fas fa-hands-helping"></i>
-                    <div class="menu_item">Ayuda</div>
-                </li>
-            </a>
+
             <a href="places.html">
                 <li><i class="fas fa-home"></i>
                     <div class="menu_item">Lugares</div>
                 </li>
             </a>
+
+            <a href="help.html">
+                <li><i class="fas fa-hands-helping"></i>
+                    <div class="menu_item">Pedir ayuda</div>
+                </li>
+            </a>
+
             <li class="back" onclick="toggleMenu()"><i class="fas fa-door-open"></i>
                 <div class="menu_item">Salir</div>
             </li>
@@ -64,46 +69,130 @@
     </header>
     <div class="wrapper supports">
 
-        <div class="support card2" id="myBtn">
+        <div class="support card2 support2" id="myBtn">
             <div class="card2_image">
                 <img width="120" src="./assets/img/images/clase.jpg" alt="Escuela Superior de Diseño de Madrid">
             </div>
             <div class="card2_name">
-                <h2>Ir a clase</h2>
+                <h2>Ir al aula 2.5</h2>
             </div>
         </div>
         <!--/support-->
 
-        <!----------- Modal support "Ir a clase" ----------->
-        <div id="myModal" class="modal">
 
+
+        <!----------- Modal support "Ir al aula 2.6" ----------->
+        <div id="myModal" class="modal 2_step1 hide">
             <!-- Modal content -->
-            <div class="modal-content">
+            <div class="modal_content">
+                <div class="modal_audio"><i class="fas fa-volume-up"></i></div>
                 <button id=play class="modal_image">
-                    <img src="./assets/img/images/escaleras.jpg" alt="">
+                    <img src="./assets/img/images/corridor1.jpeg" alt="">
                 </button>
                 <article class="modal_description">
-                    <p>Tienes que ir recto, hasta encontrar las escaleras</p>
+                    <p>Continúa recto hasta la pared amarilla</p>
                 </article>
                 <div class="modal_footer">
+                    <div class="next 2_next1">
+                        <i class="fas fa-arrow-right"></i>
+                        <div class="menu_item">Siguiente</div>
+                    </div>
                     <div class="close">
                         <i class="fas fa-door-open"></i>
                         <div class="menu_item">Salir</div>
                     </div>
                 </div>
             </div>
-
         </div>
 
-        <div class="support card2">
-            <div class="card2_icon">
-                <i class="fas fa-toilet-paper"></i>
-            </div>
-            <div class="card2_name">
-                <h2>Quiero ir al baño</h2>
+        <div id="myModal" class="modal 2_step2 hide">
+            <!-- Modal content -->
+            <div class="modal_content">
+                <div class="modal_audio"><i class="fas fa-volume-up"></i></div>
+                <button id=play class="modal_image">
+                    <img src="./assets/img/images/corridor2.jpeg" alt="">
+                </button>
+                <article class="modal_description">
+                    <p>Sigue recto por el pasillo hasta encontrar las escaleras</p>
+                </article>
+                <div class="modal_footer">
+                    <div class="next 2_next2">
+                        <i class="fas fa-arrow-right"></i>
+                        <div class="menu_item">Siguiente</div>
+                    </div>
+                    <div class="close">
+                        <i class="fas fa-door-open"></i>
+                        <div class="menu_item">Salir</div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!--/support-->
+
+        <div id="myModal" class="modal 2_step3 hide">
+            <!-- Modal content -->
+            <div class="modal_content">
+                <div class="modal_audio"><i class="fas fa-volume-up"></i></div>
+                <button id=play class="modal_image">
+                    <img src="./assets/img/images/stairs2.jpeg" alt="">
+                </button>
+                <article class="modal_description">
+                    <p>¡Genial! ahora sube las escaleras</p>
+                </article>
+                <div class="modal_footer">
+                    <div class="next 2_next3">
+                        <i class="fas fa-arrow-right"></i>
+                        <div class="menu_item">Siguiente</div>
+                    </div>
+                    <div class="close">
+                        <i class="fas fa-door-open"></i>
+                        <div class="menu_item">Salir</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal 2_step4 hide">
+                <!-- Modal content -->
+                <div class="modal_content">
+                    <div class="modal_audio"><i class="fas fa-volume-up"></i></div>
+                    <button id=play class="modal_image">
+                        <img src="./assets/img/images/corridor3.jpeg" alt="">
+                    </button>
+                    <article class="modal_description">
+                        <p>Sigue recto por el pasillo hasta encontrar el aula a la derecha</p>
+                    </article>
+                    <div class="modal_footer">
+                        <div class="next 2_next4">
+                            <i class="fas fa-arrow-right"></i>
+                            <div class="menu_item">Siguiente</div>
+                        </div>
+                        <div class="close">
+                            <i class="fas fa-door-open"></i>
+                            <div class="menu_item">Salir</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div id="myModal" class="modal 2_step5 hide">
+                <!-- Modal content -->
+                <div class="modal_content">
+                    <div class="modal_audio"><i class="fas fa-volume-up"></i></div>
+                    <button id=play class="modal_image">
+                        <img src="./assets/img/images/class.jpeg" alt="">
+                    </button>
+                    <article class="modal_description">
+                        <p>¡Has llegado!</p>
+                    </article>
+                    <div class="modal_footer">
+                        <div class="close">
+                            <i class="fas fa-door-open"></i>
+                            <div class="menu_item">Finalizar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!----------- End of support ----------->
 
         <div class="support card2">
             <div class="card2_icon">
@@ -124,6 +213,108 @@
             </div>
         </div>
         <!--/support-->
+
+        <div class="support card2 support1">
+            <div class="card2_icon">
+                <i class="fas fa-restroom"></i>
+            </div>
+            <div class="card2_name">
+                <h2>Ir al baño</h2>
+            </div>
+        </div>
+        <!--/support-->
+
+        <!----------- Modal support "Ir al baño" ----------->
+        <div id="myModal" class="modal 1_step1 hide">
+                <!-- Modal content -->
+                <div class="modal_content">
+                    <div class="modal_audio"><i class="fas fa-volume-up"></i></div>
+                    <button id=play class="modal_image">
+                        <img src="./assets/img/images/reception.jpeg" alt="">
+                    </button>
+                    <article class="modal_description">
+                        <p>Tienes que ir recto hacia la puerta, hasta encontrar las escaleras</p>
+                    </article>
+                    <div class="modal_footer">
+                        <div class="next 1_next1">
+                            <i class="fas fa-arrow-right"></i>
+                            <div class="menu_item">Siguiente</div>
+                        </div>
+                        <div class="close">
+                            <i class="fas fa-door-open"></i>
+                            <div class="menu_item">Salir</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="myModal" class="modal 1_step2 hide">
+                <!-- Modal content -->
+                <div class="modal_content">
+                    <div class="modal_audio"><i class="fas fa-volume-up"></i></div>
+                    <button id=play class="modal_image">
+                        <img src="./assets/img/images/noun_Stairs_1978047.png" alt="">
+                    </button>
+                    <article class="modal_description">
+                        <p>Ahora sube las escaleras</p>
+                    </article>
+                    <div class="modal_footer">
+                        <div class="next 1_next2">
+                            <i class="fas fa-arrow-right"></i>
+                            <div class="menu_item">Siguiente</div>
+                        </div>
+                        <div class="close">
+                            <i class="fas fa-door-open"></i>
+                            <div class="menu_item">Salir</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="myModal" class="modal 1_step3 hide">
+                <!-- Modal content -->
+                <div class="modal_content">
+                    <div class="modal_audio"><i class="fas fa-volume-up"></i></div>
+                    <button id=play class="modal_image">
+                        <img src="./assets/img/images/corridor1.jpeg" alt="">
+                    </button>
+                    <article class="modal_description">
+                        <p>Estupendo, camina recto y a la derecha está el baño</p>
+                    </article>
+                    <div class="modal_footer">
+                        <div class="next 1_next3">
+                            <i class="fas fa-arrow-right"></i>
+                            <div class="menu_item">Siguiente</div>
+                        </div>
+                        <div class="close">
+                            <i class="fas fa-door-open"></i>
+                            <div class="menu_item">Salir</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="myModal" class="modal 1_step4 hide">
+                    <!-- Modal content -->
+                    <div class="modal_content">
+                        <div class="modal_audio"><i class="fas fa-volume-up"></i></div>
+                        <button id=play class="modal_image">
+                            <img src="./assets/img/images/toilet.jpeg" alt="">
+                        </button>
+                        <article class="modal_description">
+                            <p>¡Has llegado!</p>
+                        </article>
+                        <div class="modal_footer">
+                            <div class="close">
+                                <i class="fas fa-door-open"></i>
+                                <div class="menu_item">Finalizar</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!----------- End of support ----------->
+
+
 
         <div class="support card2">
             <div class="card2_icon">

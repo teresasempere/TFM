@@ -93,7 +93,7 @@ ul {
 body,
 html {
     color: black;
-    font-size: 16px;
+    font-size: 13px;
     font-family: $roboto;
     margin: 0 auto;
     scroll-behavior: smooth;
@@ -115,7 +115,7 @@ body {
     left: 0;
     top: 0;
     width: 70%;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     display: none;
     z-index: 300;
     background-color: white;
@@ -219,7 +219,7 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    background-color: $green;
+    background-color: lighten($color: $green, $amount: 12);
 
     .place {
         width: 80%;
@@ -339,7 +339,7 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    background-color: lighten($color: $turquoise, $amount: 10);
+    background-color: lighten($color: $turquoise, $amount: 20);
 
     .support {
         width: 90%;
@@ -347,67 +347,113 @@ header {
 }
 
 
-/*-> Modal */
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: white;
-    margin: 1rem auto;
-    padding: 1.5rem 2rem 1.5rem 2rem;
-    border: 1px solid #888;
-    width: 85%;
-
-    .modal_image {
-        width: 100%;
-
-        img {
-            width: 100%;
-            object-fit: cover;
-        }
-    }
-
-    .modal_description {
-        font-size: 1.5rem;
-        font-weight: 600;
-        line-height: 2rem;
-        margin: 1.5rem 0 1.5rem 0;
-    }
-
-    .close {
-        display: flex;
-        justify-content: center;
-        font-size: 1.5rem;
-        border: $border;
-        padding: .7rem;
-        background-color: lighten($color: $pink, $amount: 20);
-
-        i {
-            width: 20%;
-        }
-
-        .menu_item {
-            font-weight: 600;
-        }
-    }
-}
-
 .show {
     display: block;
 }
 
+.bluetooth {
+    .modal_content {
+        i {
+            padding: 3.5rem 0 4rem 0;
+            text-align: center;
+            font-size: 5rem;
+            color: $blue;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 1.7rem;
+            padding: 0 1rem 3rem 1rem;
+        }
+    }
+}
+
+/* ---- MODAL ---- */
+.modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+
+    .modal_content {
+        @include card;
+        display: flex;
+        flex-flow: column;
+        margin: 2rem;
+        padding: .5rem 1.5rem 3rem 2.3rem;
+
+        .modal_audio {
+            padding: .1rem;
+            text-align: right;
+        }
+
+        .modal_image {
+            width: 100%;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .modal_description {
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 2rem;
+            margin: 1.5rem 0 1.5rem 0;
+        }
+
+        .close {
+            display: flex;
+            justify-content: center;
+            font-size: 1.5rem;
+            border: $border;
+            padding: .7rem;
+            background-color: lighten($color: $pink, $amount: 20);
+
+            i {
+                width: 20%;
+            }
+
+            .menu_item {
+                font-weight: 600;
+            }
+        }
+
+        .next {
+            display: flex;
+            justify-content: center;
+            font-size: 1.5rem;
+            border: $border;
+            padding: .7rem;
+            background-color: lighten($color: $green, $amount: 10);
+            margin: 0 0 1rem 0;
+
+            i {
+                width: 20%;
+            }
+
+            .menu_item {
+                font-weight: 600;
+            }
+        }
+
+    }
+
+    button {
+        background-color: none;
+        border: none;
+        box-shadow: none;
+    }
+}
+
+.hide {
+    display: none;
+}
 
 /*---- QR ----*/
 

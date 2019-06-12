@@ -56,7 +56,7 @@ ul {
 body,
 html {
   color: black;
-  font-size: 16px;
+  font-size: 13px;
   font-family: "Roboto", sans-serif;
   margin: 0 auto;
   scroll-behavior: smooth;
@@ -73,7 +73,7 @@ html {
   left: 0;
   top: 0;
   width: 70%;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   display: none;
   z-index: 300;
   background-color: white;
@@ -175,7 +175,7 @@ header .section_title {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  background-color: #83D0B0;
+  background-color: #afe1cc;
 }
 
 .places .place {
@@ -300,53 +300,77 @@ header .section_title {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  background-color: #91d4e3;
+  background-color: #b9e4ee;
 }
 
 .supports .support {
   width: 90%;
 }
 
-/*-> Modal */
+.show {
+  display: block;
+}
+
+.bluetooth .modal_content i {
+  padding: 3.5rem 0 4rem 0;
+  text-align: center;
+  font-size: 5rem;
+  color: #5D86C4;
+}
+
+.bluetooth .modal_content p {
+  font-weight: 500;
+  font-size: 1.7rem;
+  padding: 0 1rem 3rem 1rem;
+}
+
+/* ---- MODAL ---- */
 .modal {
-  display: none;
+  width: 100%;
+  height: 100vh;
   position: fixed;
-  z-index: 1;
-  left: 0;
   top: 0;
+  left: 0;
+  z-index: 300;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.modal .modal_content {
+  background-color: #FFFFFF;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
+  border: 0.2px solid #C4C4C4;
+  border-radius: 3px;
+  padding: 1.7rem 1rem 1.7rem 1rem;
+  margin: .8rem 0 0 0;
+  display: flex;
+  flex-flow: column;
+  margin: 2rem;
+  padding: .5rem 1.5rem 3rem 2.3rem;
+}
+
+.modal .modal_content .modal_audio {
+  padding: .1rem;
+  text-align: right;
+}
+
+.modal .modal_content .modal_image {
   width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: white;
-  margin: 1rem auto;
-  padding: 1.5rem 2rem 1.5rem 2rem;
-  border: 1px solid #888;
-  width: 85%;
-}
-
-.modal-content .modal_image {
-  width: 100%;
-}
-
-.modal-content .modal_image img {
+.modal .modal_content .modal_image img {
   width: 100%;
   object-fit: cover;
 }
 
-.modal-content .modal_description {
+.modal .modal_content .modal_description {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 2rem;
   margin: 1.5rem 0 1.5rem 0;
 }
 
-.modal-content .close {
+.modal .modal_content .close {
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
@@ -355,16 +379,40 @@ header .section_title {
   background-color: #fbc7c5;
 }
 
-.modal-content .close i {
+.modal .modal_content .close i {
   width: 20%;
 }
 
-.modal-content .close .menu_item {
+.modal .modal_content .close .menu_item {
   font-weight: 600;
 }
 
-.show {
-  display: block;
+.modal .modal_content .next {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  border: 0.2px solid #C4C4C4;
+  padding: .7rem;
+  background-color: #a8dec8;
+  margin: 0 0 1rem 0;
+}
+
+.modal .modal_content .next i {
+  width: 20%;
+}
+
+.modal .modal_content .next .menu_item {
+  font-weight: 600;
+}
+
+.modal button {
+  background-color: none;
+  border: none;
+  box-shadow: none;
+}
+
+.hide {
+  display: none;
 }
 
 /*---- QR ----*/

@@ -5,55 +5,6 @@ function toggleMenu() {
   element.classList.toggle("show");
 }
 
-
-/* --- Sticky header" ---
-
-window.onscroll = function() {myFunction()};
-
-
-var navbar = document.getElementById("header");
-
-
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-} */
-
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function () {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-
-
-
 /* Text to speech */
 
 onload = function () {
@@ -64,8 +15,6 @@ onload = function () {
 
       /* references to the buttons */
       var playEle = document.querySelector('#play');
-      var pauseEle = document.querySelector('#pause');
-      var stopEle = document.querySelector('#stop');
 
       /* click event handlers for the buttons */
       playEle.addEventListener('click', onClickPlay);
@@ -74,7 +23,7 @@ onload = function () {
         if (!flag) {
           flag = true;
           utterance = new SpeechSynthesisUtterance(
-            document.querySelector('article').textContent);
+            document.querySelector('.modal_description').textContent);
           utterance.voice = synth.getVoices()[0];
           utterance.onend = function () {
             flag = false;
@@ -92,3 +41,123 @@ onload = function () {
     alert("");
   }
 }
+
+$(document).ready(
+  function () {
+
+    // bluetooth
+
+    // exit 1
+    $(".close").click(function () {
+      $(".1_step1").hide();
+      $(".1_step2").hide();
+      $(".1_step3").hide();
+      $(".1_step4").hide();
+    });
+
+    // exit 2
+    $(".close").click(function () {
+      $(".2_step1").hide();
+      $(".2_step2").hide();
+      $(".2_step3").hide();
+      $(".2_step4").hide();
+      $(".2_step5").hide();
+    });
+
+    //support1
+
+    // 1_step1
+    $(".support1").click(function () {
+      $(".1_step1").show();
+      $(".1_step2").hide();
+      $(".1_step3").hide();
+      $(".1_step4").hide();
+    });
+
+    // 1_step2
+    $(".1_next1").click(function () {
+      $(".1_step2").show();
+      $(".1_step1").hide();
+      $(".1_step3").hide();
+      $(".1_step4").hide();
+    });
+    4
+
+    // 1_step3
+    $(".1_next2").click(function () {
+      $(".1_step3").show();
+      $(".1_step1").hide();
+      $(".1_step2").hide();
+      $(".1_step4").hide();
+    });
+
+    // 1_step4
+    $(".1_next3").click(function () {
+      $(".1_step4").show();
+      $(".1_step1").hide();
+      $(".1_step2").hide();
+      $(".1_step3").hide();
+    });
+
+
+
+    //support2
+
+    // 2_step1
+    $(".support2").click(function () {
+      $(".2_step1").show();
+      $(".2_step2").hide();
+      $(".2_step3").hide();
+      $(".2_step4").hide();
+      $(".2_step5").hide();
+    });
+
+    // 2_step2
+    $(".2_next1").click(function () {
+      $(".2_step2").show();
+      $(".2_step1").hide();
+      $(".2_step3").hide();
+      $(".2_step4").hide();
+      $(".2_step5").hide();
+    });
+    4
+
+    // 2_step3
+    $(".2_next2").click(function () {
+      $(".2_step3").show();
+      $(".2_step1").hide();
+      $(".2_step2").hide();
+      $(".2_step4").hide();
+      $(".2_step5").hide();
+    });
+
+    // 2_step4
+    $(".2_next3").click(function () {
+      $(".2_step4").show();
+      $(".2_step1").hide();
+      $(".2_step2").hide();
+      $(".2_step3").hide();
+      $(".2_step5").hide();
+    });
+
+    // 2_step4
+    $(".2_next4").click(function () {
+      $(".2_step5").show();
+      $(".2_step1").hide();
+      $(".2_step2").hide();
+      $(".2_step3").hide();
+      $(".2_step4").hide();
+    });
+
+  }
+
+);
+
+
+
+
+/*----------- USERS ------------*/
+
+/*----------- GROUPS ------------*/
+
+/*----------- PLACES ------------*/

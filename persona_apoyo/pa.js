@@ -94,7 +94,10 @@ $(document).ready(
             $(".user_remove").hide();
         });
 
-        //Calendar
+        //Modal "aceptar"
+        $(".close_modal").click(function () {
+            $(".modal_edit").hide();
+        });
 
     }
 

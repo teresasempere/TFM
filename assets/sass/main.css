@@ -86,11 +86,18 @@ html {
 }
 
 .start .imagotype {
-  width: 100px;
-  height: 100px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
 }
 
 .start .imagotype svg {
+  width: 80px;
+  height: 80px;
+}
+
+.start .imagotype .animated {
   -webkit-animation-name: animate;
   /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 4s;

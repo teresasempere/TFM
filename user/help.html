@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Prototipo Usuario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prototipo">
+    <meta http-equiv="Page-Enter" content="revealTrans(Duration=2.0,Transition=12)">
+
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link href="../user/assets/sass/user.css" rel="stylesheet">
+    <link href="../assets/sass/main.css" rel="stylesheet">
+    <link href="../persona_apoyo/assets/sass/personaApoyo.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="assets/img/ico/favicon.ico">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="menu" id="menu">
+        <ul>
+            <a href="supports.html">
+                <li><i class="fas fa-sun"></i>
+                    <div class="menu_item">Hoy</div>
+                </li>
+            </a>
+
+            <a href="places.html">
+                <li><i class="fas fa-home"></i>
+                    <div class="menu_item">Lugares</div>
+                </li>
+            </a>
+
+            <a href="help.html">
+                <li><i class="fas fa-hands-helping"></i>
+                    <div class="menu_item">Pedir ayuda</div>
+                </li>
+            </a>
+
+            <li class="back" onclick="toggleMenu()"><i class="fas fa-door-open"></i>
+                <div class="menu_item">Salir</div>
+            </li>
+
+        </ul>
+
+    </div>
+    <header id="header" class="header_support">
+        <nav>
+            <div class="menu_icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i><span>MENÚ</span>
+            </div>
+            <div class="user_icon">
+                <div class="user_image">
+                    <img src="https://picsum.photos/200" alt="Icono de usuario">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+        <div class="wrapper confirmation supports help">
+
+            <div class="confirmation_main">
+
+                <div class="photo">
+                    <img src="../assets/img/users/pa.jpg" alt="">
+                </div>
+
+                <div class="description">
+                    <div class="item">
+                        <span><i class="material-icons">
+                                face
+                            </i></span><b>Nombre de la persona</b>
+                    </div>
+
+                    <div class="item">
+                        <span><i class="material-icons">
+                                info
+                            </i></span>Persona de apoyo
+                    </div>
+
+                    <div class="item">
+                        <span><i class="material-icons">
+                                phone
+                            </i></span>+348558720
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="actions">
+                <button class="b_green">Llamar</button>
+            </div>
+
+        </div>
+    <script src="../main.js"></script>
+
+</body>
+
+</html>

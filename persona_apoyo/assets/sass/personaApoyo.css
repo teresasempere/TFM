@@ -593,6 +593,12 @@ footer .hide {
   background-color: #ceecf3;
 }
 
+.modal_edit .modal_footer {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 0 0;
+}
+
 .more_button {
   position: fixed;
   bottom: 5rem;
@@ -783,6 +789,19 @@ footer .hide {
   height: 80px;
   width: 80px;
   border-radius: 80px;
+}
+
+.user_card .photo_place {
+  height: 80px;
+  width: 80px;
+  border-radius: 0;
+}
+
+.user_card .photo_place img {
+  object-fit: cover;
+  height: 80px;
+  width: 80px;
+  border-radius: 0;
 }
 
 .user_card .card_info {
@@ -1387,4 +1406,8 @@ footer .hide {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+.place_color .card_info .card_footer .places i {
+  color: #5D86C4;
 }
